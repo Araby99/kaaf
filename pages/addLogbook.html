@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كاف | إضافة سجل المتابعة</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/dashboard-g.css">
+    <link rel="stylesheet" href="../css/users.css">
+    <link rel="stylesheet" href="../css/addLogbook.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../assets/logo/Logo_kaaf.png" alt="كاف">
+            <div class="bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="user">
+            <div class="hello">
+                <p class="hi">أهلا</p>
+                <p class="username">عادل الشريطي العوفي</p>
+            </div>
+            <div class="user-pic">
+                <p>ع</p>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="links" id="links">
+            <div class="times" id="close">
+                <div class="time"></div>
+                <div class="time"></div>
+            </div>
+            <a href="dashboard.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>لوحة القيادة</span>
+            </a>
+            <a href="users.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>المستخدمين</span>
+            </a>
+            <a href="setupLogbook.html" class="item active">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>إعداد سجل المتابعة</span>
+            </a>
+            <a href="logbook.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>سجل المتابعة</span>
+            </a>
+            <a href="homeworks.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>الواجبات</span>
+            </a>
+            <a href="exams.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>الإختبارات</span>
+            </a>
+            <a href="library.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>المكتبة</span>
+            </a>
+            <a href="financialOperations.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>العمليات المالية</span>
+            </a>
+            <a href="subscriptions.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>الإشتراكات</span>
+            </a>
+            <a href="notification.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>الإشعارات</span>
+            </a>
+            <div class="item setting" id="setting">
+                <div class="title">
+                    <img src="../assets/icons/white-arrow.svg" id="settingArrow" class="itemArrow" alt="سهم أبيض">
+                    <span>الإعدادات</span>
+                </div>
+                <div id="settingItems">
+                    <ul>
+                        <li>
+                            <a href="subjects.html">المواد</a>
+                        </li>
+                        <li>
+                            <a href="classes.html">الصفوف</a>
+                        </li>
+                        <li>
+                            <a href="terms.html">الأترام</a>
+                        </li>
+                        <li>
+                            <a href="years.html">السنوات الدراسية</a>
+                        </li>
+                        <li>
+                            <a href="filesCategories.html">فئات الملفات</a>
+                        </li>
+                        <li>
+                            <a href="filesTypes.html">أنواع الملفات</a>
+                        </li>
+                        <li>
+                            <a href="generalSetting.html">الاعدادت العامة</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="title">
+                <p>إضافة سجل المتابعة</p>
+                <p id="trace">لوحة القيادة &gt; إضافة سجل المتابعة</p>
+            </div>
+            <div class="users-contect addLogbook">
+                <div class="filter">
+                    <div class="filter-items" id="filterItems">
+                        <select name="subject" id="subject">
+                            <option selected disabled hidden>
+                                المادة
+                            </option>
+                        </select>
+                        <select name="class" id="class">
+                            <option selected disabled hidden>
+                                الصف
+                            </option>
+                        </select>
+                        <select name="term" id="term">
+                            <option selected disabled hidden>
+                                الفصل التعليمي
+                            </option>
+                        </select>
+                        <select name="peroid" id="peroid">
+                            <option selected disabled hidden>
+                                الفترة
+                            </option>
+                        </select>
+                        <select name="year" id="year">
+                            <option selected disabled hidden>
+                                السنة الدراسية
+                            </option>
+                        </select>
+                        <select name="teacher" id="teacher">
+                            <option selected disabled hidden>
+                                المعلم
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="download">
+                    <button>
+                        <span>تنزيل البيانات من نظام نور</span>
+                        <img src="../assets/icons/download.svg" alt="تنزيل">
+                    </button>
+                </div>
+                <div class="add-col">
+                    <img src="../assets/icons/add-circle.svg" alt="إضافة" id="addColBtn">
+                </div>
+                <div class="table-responsive">
+                    <table id="table">
+                        <tr>
+                            <th>رقم الطالب</th>
+                            <th>إسم الطالب</th>
+                            <th>العمود الأول</th>
+                            <th>العمود الثاني</th>
+                            <th>العمود الثالث</th>
+                            <th>العمود الرابع</th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="save-log">
+                    <button>
+                        <span>حفظ السجل</span>
+                        <img src="../assets/icons/save.svg" alt="حفظ">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/addCol.js"></script>
+</body>
+
+</html>

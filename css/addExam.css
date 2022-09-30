@@ -1,0 +1,113 @@
+.addExam form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.addExam form > * {
+    width: 48%;
+}
+.addExam form select,
+.addExam form input[type="date"] {
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    background: rgba(85, 55, 38, 0.07);
+    color: #707070;
+    border: none;
+}
+.addExam .add-question {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.addExam .add-question a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1BA1FC;
+    font-size: 18px;
+    font-family: DINMedium;
+}
+.addExam .add-question a img {
+    height: 17px;
+}
+.addExam .questions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.addExam .questions .question {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0px 5px 5px 5px rgb(240, 240, 240);
+    border-radius: 5px;
+}
+.addExam .questions .question .title {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.addExam .questions .question .title .number {
+    height: 27px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0063A4;
+    font-size: 20px;
+    font-family: DINBold;
+    color: #fff;
+}
+.addExam .questions .question .title p {
+    font-family: DINBold;
+    color: #0063A4;
+}
+.addExam .questions .question .info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #0063A4;
+}
+.addExam .questions .question .info .marks {
+    font-family: DINBold;
+}
+.addExam .questions .question .info .action {
+    display: flex;
+    gap: 10px;
+}
+.addExam .questions .question .info .action img {
+    height: 20px;
+    cursor: pointer;
+}
+.addExam .save {
+    margin: 50px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.addExam .save input {
+    background: linear-gradient(To Left, #0063A4, #13A2FF);
+    padding: 10px 0;
+    width: 150px;
+    border: none;
+    border-radius: 30px;
+    font-family: DINMedium;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .addExam form {
+        padding: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .addExam form > * {
+        width: 100%;
+    }
+}

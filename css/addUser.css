@@ -1,0 +1,146 @@
+.addUser form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.addUser form > div {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addUser form > div span {
+    font-size: 18px;
+}
+.addUser form > div input,
+.addUser form > div select {
+    width: 75%;
+    background: #F6F6F6;
+    padding: 20px 0;
+    border: none;
+    border-radius: 20px;
+}
+.container-checkbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 18px;
+}
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0%;
+    right: -5%;
+    transform: translate(100%, 0);
+    height: 25px;
+    width: 25px;
+    background-color: none;
+    border: solid 2px #000;
+}
+.container-checkbox:hover input ~ .checkmark {
+    background-color: none;
+}
+.container-checkbox input:checked ~ .checkmark {
+    background-color: none;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container-checkbox input:checked ~ .checkmark:after {
+    display: block;
+}
+.container-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #000;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.addUser .prom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.addUser .prom .prom-items {
+    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+.addUser .save {
+    margin: 50px auto;
+    width: 200px;
+}
+.addUser .save input {
+    background: linear-gradient(To Left, #0063A4, #13A2FF);
+    padding: 10px 0;
+    border-radius: 30px;
+    font-family: DINMedium;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+.myAccount .save {
+    width: 100%;
+}
+.myAccount .save input {
+    width: 150px;
+}
+.myAccount .save .logout {
+    background: linear-gradient(To Left, #A42200, #FF1343);
+    padding: 10px 0;
+    border-radius: 30px;
+    font-family: DINMedium;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    width: 200px;
+}
+@media (max-width: 1200px) {
+    .addUser form {
+        padding: 20px;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .addUser form > div span {
+        font-size: .9rem;
+    }
+    .addUser .prom {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .addUser .prom .prom-items {
+        gap: 20px;
+        justify-content: space-between;
+    }
+    .addUser .prom .prom-items > label {
+        width: 40%;
+    }
+}
+@media (max-width: 768px) {
+    .addUser form > div {
+        width: 100%;
+    }
+}

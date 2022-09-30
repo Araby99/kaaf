@@ -1,0 +1,168 @@
+img {
+    width: 100%;
+}
+body {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.login {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 30px;
+}
+.login .logo img {
+    width: 100px;
+}
+.login .sign {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    width: 80%;
+}
+.login .sign .title {
+    font-family: DINBold;
+    font-size: 30px;
+    color: #553726;
+}
+.login .sign .type {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.login .sign .type button {
+    flex: 1;
+    background: none;
+    text-align: center;
+    font-family: DINMedium;
+    font-size: 18px;
+    border: none;
+    padding: 10px;
+    color: #ccc;
+    border-bottom: solid 2px #ccc;
+    cursor: pointer;
+}
+.login .sign .type button.active {
+    color: #000;
+    border-bottom: solid 2px #000;
+}
+.login .sign #teacher {
+    display: flex;
+    justify-content: center;
+}
+.login .sign #teacher img {
+    width: 70%;
+}
+.login .sign #manager {
+    width: 100%;
+}
+.login .sign #manager form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+}
+.login .sign #manager input {
+    width: 100%;
+}
+.login .sign #manager input:nth-child(1),
+.login .sign #manager input:nth-child(2) {
+    padding: 20px;
+    color: #000;
+    background: rgba(85, 55, 38, .07);
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+.login .sign #manager .pass {
+    width: 100%;
+    position: relative;
+}
+.login .sign #manager .pass img {
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    top: 50%;
+    left: 8%;
+    cursor: pointer;
+    transform: translate(0, -50%);
+}
+.login .sign #manager a {
+    font-size: 18px;
+    color: #000;
+}
+.login .sign #manager input[type="submit"] {
+    background: linear-gradient(To Right, #13A2FF, #0063A4);
+    padding: 20px;
+    border-radius: 40px;
+    border: none;
+    font-family: DINMedium;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 20px 20px 0 #ccc;
+}
+.banner {
+    flex: 8;
+    background: url(../assets/img/login-bg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-top-right-radius: 200px;
+}
+.banner > img {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+}
+.banner .title {
+    margin: 70px;
+    color: #fff;
+    font-family: DINBold;
+}
+.banner .title p:nth-child(1) {
+    font-size: 62px;
+}
+.banner .title p:nth-child(2) {
+    font-size: 37px;
+}
+.banner .copyrightes {
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    color: #fff;
+}
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .banner {
+        border-radius: 0;
+    }
+    .login {
+        gap: 20px;
+    }
+    .login .sign #teacher img {
+        height: 100px;
+        width: auto;
+    }
+    .banner .title {
+        margin: 20px;
+    }
+    .banner .title p:nth-child(1) {
+        font-size: 30px;
+    }
+    .banner .title p:nth-child(2) {
+        font-size: 20px;
+    }
+}

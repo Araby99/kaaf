@@ -1,0 +1,218 @@
+body {
+    padding: 20px;
+    background: #F5F5F5;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+nav .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+}
+nav .logo img {
+    width: 69px;
+}
+nav .logo .bars {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+nav .logo .bars .bar {
+    height: 2px;
+    width: 24px;
+    background: #000;
+}
+nav .user {
+    flex: 7;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+nav .user .hello {
+    text-align: left;
+    font-size: 18px;
+}
+nav .user .hello .hi {
+    color: #B99E67;
+}
+nav .user .hello .username {
+    font-family: DINMedium;
+}
+nav .user .user-pic {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: linear-gradient(To Top Right, #DE521C, #B99E67);
+    color: #fff;
+    font-size: 25px;
+    font-family: DINMedium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+header .links {
+    flex: 1;
+    background: linear-gradient(To Bottom, #005D98, #6F61FF);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+header .links .item {
+    width: 100%;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    color: #fff;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 30px;
+}
+header .links .item span {
+    font-family: DINMedium;
+    text-align: right;
+}
+header .links .item:hover {
+    background: #fff;
+    color: #155EAC;
+}
+header .links .item.active {
+    background: #fff;
+    color: #155EAC;
+}
+header .links .setting {
+    display: flex;
+    flex-direction: column;
+}
+header .links .setting .title {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    width: 100%;
+}
+header .links .setting #settingItems {
+    display: none;
+}
+header .links .setting.active #settingItems {
+    display: block;
+}
+header .links .setting #settingItems a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: DINMedium;
+    color: #000;
+}
+header .links .setting #settingItems ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+header > div:nth-child(2) {
+    flex: 7;
+}
+header > div:nth-child(2) > .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > div:nth-child(2) > .title p:nth-child(1) {
+    font-size: 40px;
+    font-family: DINMedium;
+    color: #024F81;
+}
+header .grey-trace {
+    color: #666666;
+}
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+input.text-date {
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #000;
+    border: none;
+    background: #fff;
+}
+input.text-date.dark {
+    background: #fff;
+    background: rgba(85, 55, 38, 0.07);
+}
+
+@media (max-width: 1200px) {
+    header {
+        display: block;
+    }
+    nav {
+        flex-wrap: wrap;
+    }
+    nav .logo {
+        flex: 3;
+        gap: 20px;
+    }
+    header .links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 0%;
+        padding: 0;
+        height: 100vh;
+        border-radius: 0;
+        overflow: auto;
+        transition: .5s;
+        z-index: 100;
+    }
+    .times {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        margin: 20px 0;
+        cursor: pointer;
+    }
+    .time {
+        height: 2px;
+        width: 30px;
+        background: #fff;
+    }
+    .time:nth-child(1) {
+        transform: rotate(45deg);
+    }
+    .time:nth-child(2) {
+        transform: translate(0, -1px) rotate(-45deg);
+    }
+}
+@media (max-width: 786px) {
+    header > div:nth-child(2) > .title {
+        gap: 20px;
+    }
+    nav .user {
+        gap: 5px;
+    }
+    nav .user .user-pic {
+        min-width: 80px;
+    }
+}
+@media (min-width: 1200px) {
+    body {
+        zoom: 85%!important;
+    }
+}

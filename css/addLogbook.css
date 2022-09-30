@@ -1,0 +1,91 @@
+.addLogbook .filter {
+    background: none;
+}
+.addLogbook .filter select {
+    background: #F6F6F6;
+}
+.addLogbook .download {
+    display: flex;
+    justify-content: center;
+}
+.addLogbook .download button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 29px;
+    font-family: DINBold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background: #E5EDFF;
+    color: #0082CB;
+    border: none;
+    cursor: pointer;
+}
+.addLogbook table tr:nth-child(1) td {
+    background: none;
+}
+.addLogbook table .add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.addLogbook table .add img {
+    filter: contrast(.2);
+    transition: .5s;
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+}
+.addLogbook table .add img:hover {
+    filter: contrast(1);
+}
+.addLogbook table tr th {
+    background: #275FBC;
+}
+.addLogbook table tr:nth-child(1) td:last-child {
+    display: block;
+}
+.addLogbook .save-log {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.addLogbook .save-log button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background: #E5EDFF;
+    color: #0082CB;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: DINMedium;
+}
+.add-col {
+    display: flex;
+    padding: 20px;
+    justify-content: flex-end;
+}
+.add-col img {
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+@media (max-width: 1200px) {
+    .addLogbook .save-log button {
+        margin: 20px 0;
+    }
+}
+@media (max-width: 768px) {
+    .addLogbook .download button {
+        margin: 30px;
+        font-size: 1rem;
+    }
+    .addLogbook .download button img {
+        height: 50px;
+    }
+}

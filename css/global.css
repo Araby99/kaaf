@@ -1,0 +1,28 @@
+* {
+    direction: rtl;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: DINRegular;
+    outline: none;
+    text-align: right;
+}
+@font-face {
+    font-family: DINBold;
+    src: url(../assets/fonts/DINNextBold.ttf);
+}
+@font-face {
+    font-family: DINRegular;
+    src: url(../assets/fonts/DINNextRegular.ttf);
+}
+@font-face {
+    font-family: DINMedium;
+    src: url(../assets/fonts/DINNextMedium.ttf);
+}
+@font-face {
+    font-family: alameen;
+    src: url(../assets/fonts/alameen.ttf);
+}
+span {
+    font-family: inherit!important;
+}

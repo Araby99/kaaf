@@ -1,0 +1,79 @@
+.addHomework form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.addHomework select {
+    width: 30%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    background: rgba(85, 55, 38, 0.07);
+    color: #707070;
+    border: none;
+}
+.addHomework input[type="text"],
+.addHomework textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    background: rgba(85, 55, 38, 0.07);
+    color: #707070;
+    border: none;
+}
+.addHomework .upload {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.addHomework .upload input {
+    display: none;
+}
+.addHomework .upload img {
+    height: 30px;
+}
+.all-students,
+.a-student {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+}
+.all-students select ,
+.a-student select {
+    width: 400px;
+}
+.addHomework .save {
+    margin: 50px auto;
+}
+.addHomework .save input {
+    background: linear-gradient(To Left, #0063A4, #13A2FF);
+    padding: 10px 0;
+    width: 150px;
+    border: none;
+    border-radius: 30px;
+    font-family: DINMedium;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+@media (max-width: 1200px) {
+    .addHomework form {
+        padding: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .addHomework select {
+        width: 100%;
+    }
+    .all-students, .a-student {
+        width: 100%;
+        gap: 20px;
+    }
+    .all-students select, .a-student select {
+        width: 200px
+    }
+}

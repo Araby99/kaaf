@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كاف | إضافة إختبار</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/dashboard-g.css">
+    <link rel="stylesheet" href="../css/users.css">
+    <link rel="stylesheet" href="../css/addExam.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../assets/logo/Logo_kaaf.png" alt="كاف">
+            <div class="bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="user">
+            <div class="hello">
+                <p class="hi">أهلا</p>
+                <p class="username">عادل الشريطي العوفي</p>
+            </div>
+            <div class="user-pic">
+                <p>ع</p>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="links" id="links">
+            <div class="times" id="close">
+                <div class="time"></div>
+                <div class="time"></div>
+            </div>
+            <a href="dashboard.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>لوحة القيادة</span>
+            </a>
+            <a href="users.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>المستخدمين</span>
+            </a>
+            <a href="setupLogbook.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>إعداد سجل المتابعة</span>
+            </a>
+            <a href="logbook.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>سجل المتابعة</span>
+            </a>
+            <a href="homeworks.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>الواجبات</span>
+            </a>
+            <a href="exams.html" class="item active">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>الإختبارات</span>
+            </a>
+            <a href="library.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>المكتبة</span>
+            </a>
+            <a href="financialOperations.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>العمليات المالية</span>
+            </a>
+            <a href="subscriptions.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>الإشتراكات</span>
+            </a>
+            <a href="notification.html" class="item">
+                <img src="../assets/icons/white-arrow.svg" class="itemArrow" alt="سهم أبيض">
+                <span>الإشعارات</span>
+            </a>
+            <div class="item setting" id="setting">
+                <div class="title">
+                    <img src="../assets/icons/white-arrow.svg" id="settingArrow" class="itemArrow" alt="سهم أبيض">
+                    <span>الإعدادات</span>
+                </div>
+                <div id="settingItems">
+                    <ul>
+                        <li>
+                            <a href="subjects.html">المواد</a>
+                        </li>
+                        <li>
+                            <a href="classes.html">الصفوف</a>
+                        </li>
+                        <li>
+                            <a href="terms.html">الأترام</a>
+                        </li>
+                        <li>
+                            <a href="years.html">السنوات الدراسية</a>
+                        </li>
+                        <li>
+                            <a href="filesCategories.html">فئات الملفات</a>
+                        </li>
+                        <li>
+                            <a href="filesTypes.html">أنواع الملفات</a>
+                        </li>
+                        <li>
+                            <a href="generalSetting.html">الاعدادت العامة</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="title">
+                <p> إضافة إختبار</p>
+                <p id="trace">لوحة القيادة &gt; إضافة إختبار</p>
+            </div>
+            <div class="users-contect addExam">
+                <form action="javascript:void(0)">
+                    <select>
+                        <option selected disabled hidden>
+                            المادة
+                        </option>
+                    </select>
+                    <select>
+                        <option selected disabled hidden>
+                            توجيه الدرجة
+                        </option>
+                    </select>
+                    <input class="text-date dark" placeholder="تاريخ الإختبار" type="text"
+                        onfocus="(this.type = 'date')">
+                    <select>
+                        <option selected disabled hidden>
+                            المدة
+                        </option>
+                    </select>
+                    <div class="all-students">
+                        <input type="radio">
+                        <span>جميع الطلاب</span>
+                    </div>
+                    <select>
+                        <option selected disabled hidden>
+                            حدد الفصول
+                        </option>
+                    </select>
+                    <div class="all-students">
+                        <input type="radio">
+                        <span>أرسل لطالب</span>
+                    </div>
+                    <select>
+                        <option selected disabled hidden>
+                            إختر الطالب
+                        </option>
+                    </select>
+                    <div class="add-question">
+                        <a href="addQuestion.html">
+                            <img src="../assets/icons/add-circle-outline.png" alt="إضافة سؤال">
+                            <span>إضافة سؤال</span>
+                        </a>
+                    </div>
+                    <div class="questions">
+                        <div class="question">
+                            <div class="title">
+                                <div class="number">2</div>
+                                <p>عنوان السؤال التجريبي</p>
+                            </div>
+                            <div class="info">
+                                <div class="marks">
+                                    10 نقاط
+                                </div>
+                                <div class="action">
+                                    <img src="../assets/icons/edit.svg" alt="تعديل">
+                                    <img src="../assets/icons/delete-red.png" alt="مسح">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="title">
+                                <div class="number">3</div>
+                                <p>عنوان السؤال التجريبي</p>
+                            </div>
+                            <div class="info">
+                                <div class="marks">
+                                    10 نقاط
+                                </div>
+                                <div class="action">
+                                    <img src="../assets/icons/edit.svg" alt="تعديل">
+                                    <img src="../assets/icons/delete-red.png" alt="مسح">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="question">
+                            <div class="title">
+                                <div class="number">2</div>
+                                <p>عنوان السؤال التجريبي</p>
+                            </div>
+                            <div class="info">
+                                <div class="marks">
+                                    10 نقاط
+                                </div>
+                                <div class="action">
+                                    <img src="../assets/icons/edit.svg" alt="تعديل">
+                                    <img src="../assets/icons/delete-red.png" alt="مسح">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="save">
+                        <input type="submit" value="حفظ">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+.container-checkbox {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    color: #000;
+}
+.container-checkbox .checkmark {
+    position: relative;
+}
+.container-checkbox input[type="number"] {
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    background: rgba(85, 55, 38, 0.07);
+    color: #707070;
+    border: none;
+    width: 100px;
+}
+.generalSetting form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.generalSetting form .input-container {
+    display: flex;
+}
+.generalSetting form .input-container .text {
+    width: 25%;
+}
+.generalSetting form .input-container .input > input {
+    width: 400px;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    background: rgba(85, 55, 38, 0.07);
+    color: #707070;
+    border: none;
+}
+.generalSetting form .checks {
+    display: flex;
+    gap: 50px;
+}
+
+@media (max-width: 1200px) {
+    .generalSetting form {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .generalSetting form .input-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .generalSetting form .input-container:last-child {
+        flex-direction: column;
+    }
+    .generalSetting form .input-container .text {
+        width: 100%;
+    }
+    .generalSetting form .input-container .input > input {
+        width: 100%;
+    }
+    .generalSetting form .checks {
+        flex-direction: column;
+    }
+}

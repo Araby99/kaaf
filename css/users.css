@@ -1,0 +1,135 @@
+.users-contect {
+    padding: 20px;
+    background: #fff;
+    margin: 30px 0;
+    border-radius: 20px;
+}
+.users-contect .filter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    background: #E5EDFF;
+    border-radius: 10px;
+}
+.users-contect .filter .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.users-contect .filter .title > p {
+    font-size: 20px;
+    font-family: DINMedium;
+}
+.users-contect .filter .title .arrow {
+    height: 38px;
+    width: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, .04);
+}
+.users-contect .filter .filter-items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.users-contect .filter .filter-items select {
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    width: 250px;
+}
+.users-contect .filter .filter-items input {
+    padding: 15px 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    width: 300px;
+}
+.users-contect .add-user {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.users-contect .add-user a {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 20px;
+}
+.users-contect .add-user a.questions {
+    background: #E5EDFF;
+    gap: 80px;
+    border-radius: 20px;
+    color: #0082CB;
+}
+.users-contect table {
+    width: 100%;
+}
+.users-contect table tr th {
+    background: #0082CB;
+    color: #fff;
+    padding: 20px;
+}
+.users-contect table tr:nth-child(2n) td {
+    background: #F6FAFF;
+    padding: 20px;
+}
+.users-contect table tr:nth-child(2n+1) td {
+    background: #E3EDFC;
+    padding: 20px;
+}
+.users-contect table tr td:last-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.users-contect table tr td:last-child img {
+    height: 100%;
+    cursor: pointer;
+}
+.users-contect table.finacial tr td:last-child {
+    justify-content: center;
+}
+.subjects table th:nth-child(1) {
+    width: 80%;
+}
+@media (max-width: 1200px) {
+	.users-contect {
+		padding: 0;
+	}
+	.users-contect .filter .filter-items select,
+	.users-contect .filter .filter-items input {
+		width: 200px;
+	}
+}
+@media (max-width: 768px) {
+	.users-contect .filter .filter-items select,
+	.users-contect .filter .filter-items input {
+		width: 100%;
+	}
+    .users-contect .add-user {
+        align-items: center;
+    }
+    .users-contect .add-user a.questions {
+        align-items: center;
+        padding: 10px;
+        gap: 30px;
+        font-size: 1rem;
+    }
+    .users-contect .add-user a {
+        padding: 20px;
+        font-size: 1rem;
+    }
+    .users-contect .add-user a.questions img {
+        height: auto;
+    }
+}

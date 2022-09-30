@@ -1,0 +1,140 @@
+.addQuestion form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+.addQuestion .upload {
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 18px;
+    color: #707070;
+}
+.addQuestion form input,
+.addQuestion form textarea {
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    background: rgba(85, 55, 38, 0.07);
+    color: #707070;
+    border: none;
+}
+.addQuestion .upload input {
+    display: none;
+}
+.addQuestion .upload img {
+    height: 30px;
+}
+.addQuestion .marks {
+    display: flex;
+    align-items: center;
+    color: #707070;
+    gap: 10px;
+}
+.addQuestion .add-question {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.addQuestion .add-question a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1BA1FC;
+    font-size: 18px;
+    font-family: DINMedium;
+}
+.addQuestion .add-question a img {
+    height: 17px;
+}
+.addQuestion .questions {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.addQuestion .questions .question {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: 0px 5px 5px 5px rgb(240, 240, 240);
+    border-radius: 5px;
+}
+.addQuestion .questions .question .title {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.addQuestion .questions .question .title .number {
+    height: 27px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0063A4;
+    font-size: 20px;
+    font-family: DINBold;
+    color: #fff;
+}
+.addQuestion .questions .question .title p {
+    font-family: DINBold;
+    color: #0063A4;
+}
+.addQuestion .questions .question .info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: #0063A4;
+}
+.addQuestion .questions .question .info .marks {
+    font-family: DINBold;
+}
+.addQuestion .questions .question .info .action {
+    display: flex;
+    gap: 10px;
+}
+.addQuestion .questions .question .info .action img {
+    height: 20px;
+    cursor: pointer;
+}
+.addQuestion .save {
+    margin: 50px auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.addQuestion .save input {
+    background: linear-gradient(To Left, #0063A4, #13A2FF);
+    padding: 10px 0;
+    width: 150px;
+    border: none;
+    border-radius: 30px;
+    font-family: DINMedium;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+}
+.addQuestion .check {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 18px;
+    color: #707070;
+}
+
+@media (max-width: 1200px) {
+    .addQuestion form {
+        padding: 30px;
+    }
+}
+@media (max-width: 768px) {
+    .addQuestion form input, .addQuestion form textarea {
+        width: 100%;
+    }
+    .addQuestion form input[type="radio"] {
+        width: auto;
+    }
+}

@@ -1,0 +1,37 @@
+.dashboard-contect {
+    background: #fff;
+    margin: 30px 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px;
+}
+.dashboard-contect .dash-item {
+    flex: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-size: 33px;
+}
+.dashboard-contect .dash-item a {
+    font-family: DINMedium;
+    color: #024F81;
+    text-decoration: none;
+}
+.dashboard-contect .dash-item img {
+    width: 80%;
+}
+@media (max-width: 768px) {
+    .canvas {
+        width: 100%;
+    }
+    .dashboard-contect .dash-item a {
+        font-size: 1rem;
+    }
+    .dashboard-contect {
+        flex-direction: column;
+    }
+}
