@@ -7,6 +7,8 @@ const trace = document.getElementById("trace");
 const close = document.getElementById("close");
 const links = document.getElementById("links");
 const open = document.getElementsByClassName("bars")[0];
+const userData = document.getElementById("userData");
+const userAction = document.getElementById("userAction");
 
 for (let i = 0; i < item.length; i++) {
     if (item[i].classList.contains("active")) {
@@ -56,5 +58,16 @@ window.onresize = () => {
         links.style.padding = "20px";
     } else {
         links.style.padding = "0";
+    }
+}
+
+let userOpen = false
+userData.onclick = () => {
+    if (userOpen) {
+        userAction.style.display = "none";
+        userOpen = false
+    } else {
+        userAction.style.display = "flex";
+        userOpen = true
     }
 }
