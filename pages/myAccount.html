@@ -122,42 +122,50 @@
                 <p id="trace">لوحة القيادة &gt; حسابي</p>
             </div>
             <div class="users-contect addUser myAccount">
-                <form action="javascript:void(0)">
+                <form action="javascript:void(0)" id="validateForm">
                     <div>
                         <span>الإسم الأول</span>
-                        <input type="text">
+                        <input class="formInput" type="text">
+                        <p class="match">لا يمكن أي يكون هذا الحقل فارغ *</p>
                     </div>
                     <div>
                         <span>إسم العائلة</span>
-                        <input type="text">
+                        <input class="formInput" type="text">
+                        <p class="match">لا يمكن أي يكون هذا الحقل فارغ *</p>
                     </div>
                     <div>
                         <span>إسم المستخدم</span>
-                        <input type="text">
+                        <input class="formInput" type="text">
+                        <p class="match">لا يمكن أي يكون هذا الحقل فارغ *</p>
                     </div>
                     <div>
                         <span>رقم السجل المدني</span>
-                        <input type="number">
+                        <input class="formInput" type="number">
+                        <p class="match">لا يمكن أي يكون هذا الحقل فارغ *</p>
                     </div>
                     <div>
                         <span>كلمة السر</span>
-                        <input type="password">
+                        <input class="formInput" type="password" id="password">
+                        <p class="match">كلمة المرور ليست متطابقة *</p>
                     </div>
                     <div>
                         <span>تكرار كلمة السر</span>
-                        <input type="password">
+                        <input class="formInput" type="password" id="repeatPassword">
+                        <p class="match">كلمة المرور ليست متطابقة *</p>
                     </div>
                     <div>
                         <span>رقم الحساب البنكي</span>
-                        <input type="number">
+                        <input class="formInput" type="number">
+                        <p class="match">لا يمكن أي يكون هذا الحقل فارغ *</p>
                     </div>
                     <div>
                         <span>البنك</span>
-                        <input type="text">
+                        <input class="formInput" type="text">
+                        <p class="match">لا يمكن أي يكون هذا الحقل فارغ *</p>
                     </div>
                     <div class="save">
                         <span></span>
-                        <input type="submit" value="حفظ">
+                        <input class="formInput" type="submit" value="حفظ">
                         <button class="logout">الخروج من الحساب</button>
                     </div>
                 </form>
@@ -165,6 +173,7 @@
         </div>
     </header>
     <script src="../js/dashboard.js"></script>
+    <script src="../js/validate.js"></script>
 </body>
 
 </html>
