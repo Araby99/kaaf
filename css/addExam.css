@@ -8,7 +8,8 @@
     width: 48%;
 }
 .addExam form select,
-.addExam form input[type="date"] {
+.addExam form input[type="date"],
+.addExam form input[type="text"] {
     padding: 10px;
     border-radius: 20px;
     font-size: 18px;
@@ -16,12 +17,24 @@
     color: #707070;
     border: none;
 }
-.addExam .add-question {
+.add-question {
     width: 100%;
     display: flex;
     justify-content: center;
 }
-.addExam .add-question a {
+.add-question p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #1BA1FC;
+    font-size: 18px;
+    font-family: DINMedium;
+    cursor: pointer;
+}
+.add-question a img {
+    height: 17px;
+}
+.add-question a {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -29,14 +42,11 @@
     font-size: 18px;
     font-family: DINMedium;
 }
-.addExam .add-question a img {
+.add-question p img {
     height: 17px;
 }
 .addExam .questions {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 .addExam .questions .question {
     display: flex;
@@ -83,7 +93,7 @@
     cursor: pointer;
 }
 .addExam .save {
-    margin: 50px auto;
+    margin: auto;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -110,4 +120,190 @@
     .addExam form > * {
         width: 100%;
     }
+}
+
+/* New */
+.remove {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+}
+.remove.remove-input {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translate(0, -50%);
+}
+.add-action {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+.add-action .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 120%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 10;
+}
+.add-question-pop {
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    width: 40%;
+}
+.add-student input {
+    width: 100%;
+}
+.add-student .add {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translate(0, -50%);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+.studen-added li {
+    display: flex;
+    gap: 5px;
+}
+/* MultiSelect */
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.multiselect {
+    border-radius: 20px;
+    transition: 0.2s;
+    background: rgba(85, 55, 38, 0.07);
+    color: #707070;
+    outline: none;
+    position: relative;
+}
+
+.multiselect.active {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 1px solid transparent;
+}
+
+.multiselect > .title {
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+}
+
+.multiselect > .title > .text {
+    max-height: 25px;
+    display: block;
+    float: left;
+    overflow: hidden;
+    line-height: 1.3em;
+}
+
+.multiselect > .title > .expand-icon,
+.multiselect > .title > .close-icon {
+    float: right;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: 700;
+    transition: 0.2s;
+    display: none;
+}
+
+.multiselect.selection > .title > .expand-icon {
+    display: none;
+}
+
+.multiselect > .title > .expand-icon,
+.multiselect.selection > .title > .close-icon {
+    display: flex;
+}
+
+.multiselect > .title > .close-icon:hover {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: rgb(203, 32, 32);
+    color: #fff;
+}
+
+.multiselect > .container-m {
+    max-height: 200px;
+    overflow: auto;
+    margin-left: -1px;
+    transition: 0.2s;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    border: 1px solid transparent;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+.multiselect.active > .container {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top: 0;
+}
+
+.multiselect:hover > .container-m {
+    border-top-color: rgba(0, 0, 0, 0.3);
+}
+
+.multiselect.active:hover > .container-m {
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.multiselect > .container-m > option {
+    display: none;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.multiselect > .container-m > option.selected {
+    background: rgb(122, 175, 233);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.multiselect > .container-m > option:hover {
+    background: rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+.multiselect.active > .container-m > option {
+    display: block;
 }

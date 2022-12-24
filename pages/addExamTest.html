@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كاف | إضافة إختبار</title>
+    <script src="../js/all.min.js"></script>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/dashboard-g.css">
+    <link rel="stylesheet" href="../css/users.css">
+    <link rel="stylesheet" href="../css/addExam.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../assets/logo/Logo_kaaf.png" alt="كاف">
+            <div class="bars">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div class="user">
+            <div class="user-data" id="userData">
+                <div class="hello">
+                    <p class="hi">أهلا</p>
+                    <p class="username">عادل الشريطي العوفي</p>
+                </div>
+                <div class="user-pic">
+                    <p>ع</p>
+                </div>
+            </div>
+            <div class="user-action" id="userAction">
+                <a href="myAccount.html">معلومات الحساب</a>
+                <button class="logout">تسجيل الخروج</button>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <div class="links" id="links">
+            <div class="times" id="close">
+                <div class="time"></div>
+                <div class="time"></div>
+            </div>
+            <a href="dashboard.html" class="item">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>لوحة القيادة</span>
+            </a>
+            <a href="users.html" class="item">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>المستخدمين</span>
+            </a>
+            <a href="setupLogbook.html" class="item">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>إعداد سجل المتابعة</span>
+            </a>
+            <a href="logbook.html" class="item">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>سجل المتابعة</span>
+            </a>
+            <a href="homeworks.html" class="item">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>الواجبات</span>
+            </a>
+            <a href="exams.html" class="item active">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>الإختبارات</span>
+            </a>
+            <a href="library.html" class="item">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>المكتبة</span>
+            </a>
+            <a href="financialOperations.html" class="item">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>العمليات المالية</span>
+            </a>
+            <a href="subscriptions.html" class="item">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>الإشتراكات</span>
+            </a>
+            <a href="notification.html" class="item">
+                <i class="fa-solid fa-angle-left"></i>
+                <span>الإشعارات</span>
+            </a>
+            <div class="item setting" id="setting">
+                <div class="title">
+                    <i class="fa-solid fa-angle-left"></i>
+                    <span>الإعدادات</span>
+                </div>
+                <div id="settingItems">
+                    <ul>
+                        <li>
+                            <a href="subjects.html">المواد</a>
+                        </li>
+                        <li>
+                            <a href="classes.html">الصفوف</a>
+                        </li>
+                        <li>
+                            <a href="terms.html">الأترام</a>
+                        </li>
+                        <li>
+                            <a href="years.html">السنوات الدراسية</a>
+                        </li>
+                        <li>
+                            <a href="filesCategories.html">فئات الملفات</a>
+                        </li>
+                        <li>
+                            <a href="filesTypes.html">أنواع الملفات</a>
+                        </li>
+                        <li>
+                            <a href="generalSetting.html">الاعدادت العامة</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard">
+            <div class="title">
+                <p> إضافة إختبار</p>
+                <p id="trace">لوحة القيادة &gt; إضافة إختبار</p>
+            </div>
+            <div class="users-contect addExam">
+                <form id="examForm">
+                    <select required name="subject">
+                        <option selected disabled hidden value="">
+                            المادة
+                        </option>
+                        <option value="عربي">عربي</option>
+                        <option value="رياضيات">رياضيات</option>
+                        <option value="علوم">علوم</option>
+                    </select>
+                    <select required name="degree_directive_id">
+                        <option selected disabled hidden value="">
+                            توجيه الدرجة
+                        </option>
+                        <option value="توجيه 1">توجيه 1</option>
+                        <option value="توجيه 2">توجيه 2</option>
+                    </select>
+                    <input class="text-date dark" placeholder="تاريخ الإختبار" type="text"
+                        onfocus="(this.type = 'date')" name="date">
+                    <select required name="duration">
+                        <option selected disabled hidden value="">
+                            المدة
+                        </option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="60">60</option>
+                    </select>
+                    <div class="all-students">
+                        <input type="radio">
+                        <span>جميع الطلاب</span>
+                    </div>
+                    <div class="multiselect" id="groupsSelect" multiple="multiple" data-target="multi-0">
+                        <div class="title noselect" id="groups">
+                            <span class="text">حدد الفصول</span>
+                            <span class="close-icon"><i class="fas fa-times"></i></span>
+                            <span class="expand-icon"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="container-m">
+                            <option value="فصل1">فصل1</option>
+                            <option value="فصل2">فصل2</option>
+                            <option value="فصل3">فصل3</option>
+                            <option value="فصل4">فصل4</option>
+                        </div>
+                    </div>
+                    <div class="all-students">
+                        <input type="radio">
+                        <span>أرسل لطالب</span>
+                    </div>
+                    <div class="add-student position-relative">
+                        <input type="text" class="add-student" placeholder="إختر طالب" id="studentId">
+                        <div class="add"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <input class="text-date dark" placeholder="صورة الإختبار" type="text" onfocus="(this.type = 'file')"
+                        name="image" accept="image/*">
+                    <div class="add-question w-100">
+                        <p id="addQuestion">
+                            <img src="../assets/icons/add-circle-outline.png" alt="إضافة سؤال">
+                            <span>إضافة سؤال</span>
+                        </p>
+                    </div>
+                    <ul id="studentAdded" class="studen-added">
+                        <h3 id="studentTitle" class="text-decoration-underline"></h3>
+                        <div id="students"></div>
+                    </ul>
+                    <div class="questions row" id="questions">
+                    </div>
+                    <div class="save">
+                        <input type="submit" value="حفظ">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <div class="add-action">
+        <div class="overlay"></div>
+        <div class="add-question-pop">
+            <form class="row" id="addQuestionForm">
+                <div class="col-lg-6 col-sm-12 mt-3">
+                    <input type="text" class="form-control" required placeholder="عنوان السؤال" name="title">
+                </div>
+                <div class="col-lg-6 col-sm-12 mt-3">
+                    <input type="text" class="form-control" required placeholder="تفاصيل السؤال" name="desc">
+                </div>
+                <div class="col-lg-6 col-sm-12 mt-3">
+                    <input type="file" class="form-control" placeholder="أرفق ميديا" name="file"
+                        accept="image/*,video/*,audio/*">
+                </div>
+                <div class="col-lg-12 mt-3">
+                    <input type="text" class="form-control" required placeholder="السؤال" name="question">
+                </div>
+                <div
+                    class="col-lg-12 mt-3 position-relative d-flex justify-content-between align-items-center gap-2 answer">
+                    <div class="check-answer" role="button" data-check="true">
+                        <i class="fas fa-check text-success true-check"></i>
+                        <i class="fas fa-times text-danger false-check"></i>
+                    </div>
+                    <input type="text" class="form-control" required placeholder="الإجابة" name="answer">
+                </div>
+                <div class="col-lg-12 col-sm-12 mt-3 add-question">
+                    <p id="addAnswer">
+                        <img src="../assets/icons/add-circle-outline.png" alt="إضافة إجابة">
+                        <span>إضافة إجابة</span>
+                    </p>
+                </div>
+                <div class="col-lg-12 col-sm-12 mt-3 d-flex justify-content-between align-items-center">
+                    <p class="fs-5">النقاط</p>
+                    <input type="number" class="form-control w-50" placeholder="النقاط" name="points">
+                </div>
+                <input type="submit" class="btn btn-primary w-50 mx-auto mt-5" value="حفظ">
+            </form>
+        </div>
+    </div>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/multiSelect.js"></script>
+    <script src="../js/addExam.js"></script>
+</body>
+
+</html>
