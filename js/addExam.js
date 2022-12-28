@@ -28,6 +28,7 @@ const addAction = document.getElementsByClassName("add-action")[0];
 const overlay = document.getElementsByClassName("overlay")[0];
 const checkAnswer = document.getElementsByClassName("check-answer");
 const answer = document.getElementsByClassName("answer");
+const removeAnswer = document.getElementsByClassName("removeAnswer");
 
 const removeQuestion = id => {
     data[0].questions.splice(id, 1)
@@ -127,8 +128,17 @@ fetchQuestion();
 
 addAnswer.onclick = () => {
     addAnswer.parentElement.insertAdjacentHTML("beforeBegin",
-        "<div class='col-lg-12 mt-3 position-relative d-flex justify-content-between align-items-center gap-2 answer'><div class='check-answer' role='button' data-check='false'><i class='fas fa-check text-success true-check'></i><i class='fas fa-times text-danger false-check'></i></div><input type='text' class='form-control' required placeholder='الإجابة' name='answer'></div>");
-    checks()
+        `<div class='col-lg-12 mt-3 position-relative d-flex justify-content-between align-items-center gap-2 answer'><div class='check-answer' role='button' data-check='false'><i class='fas fa-check text-success true-check'></i><i class='fas fa-times text-danger false-check'></i></div><input type='text' class='form-control' required placeholder='الإجابة' name='answer'><div role='button' class='removeAnswer d-flex justify-content-center align-items-center rounded bg-danger text-light' style='height: 30px;width: 30px;'><i class='fas fa-times'></div></div>`);
+    checks();
+    removeClick();
+}
+const removeClick = () => {
+    for (let i = 0; i < removeAnswer.length; i++) {
+        removeAnswer[i].onclick = () => {
+            answer[i + 1].remove();
+            checks();
+        }
+    }
 }
 addQuestion.onclick = () => {
     addAction.style.display = "flex";
@@ -189,7 +199,6 @@ addQuestionForm.onsubmit = e => {
     }
     newQuestion.answers = answerData;
     data[0].questions.push(newQuestion);
-    fetchQuestion();
     addAction.style.display = "none";
     document.body.style.overflow = "auto";
     addQuestionForm.reset();
@@ -199,6 +208,7 @@ addQuestionForm.onsubmit = e => {
         }
         answer[i].remove()
     }
+    fetchQuestion();
 }
 
 examForm.onsubmit = e => {
