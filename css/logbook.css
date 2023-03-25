@@ -190,6 +190,9 @@
     width: 100%;
     background: rgba(0, 0, 0, .5);
 }
+.applyMarks {
+    cursor: pointer;
+}
 @media (max-width: 768px) {
     .logbook .action {
         gap: 10px;
