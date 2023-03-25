@@ -1,5 +1,7 @@
 window.onload = () => {
     /* Variables */
+    const linksDiv = document.getElementById("links");
+    const dashboard = document.getElementsByClassName("dashboard")[0];
     const tableHead = document.getElementById("tableHead");
     const tableRows = document.getElementsByClassName("tableRows");
     let rows, rowsByPage = 5, pageActive = 1;
@@ -12,6 +14,12 @@ window.onload = () => {
     const maxMarkInput = document.getElementsByClassName("maxMarkInput");
     const markInput = document.getElementsByClassName("markInput");
     const applyMarks = document.getElementsByClassName("applyMarks");
+    const saveLog = document.getElementById("saveLog");
+
+    if (screen.width > 1200) {
+        const width = screen.width - linksDiv.clientWidth;
+        dashboard.style.width = width + "px";
+    }
 
     /* Actions */
     const actions = () => {
@@ -151,5 +159,20 @@ window.onload = () => {
             insertAfter(newCell, rows[i].children[rows[i].children.length - 1])
         }
         actions();
+    }
+    saveLog.onclick = () => {
+        let data = [];
+        for (let i = 0; i < tableHead.children.length; i++) {
+            const obj = {
+                log_column_name: tableHead.children[i].innerHTML,
+            }
+            let values = [];
+            for (let j = 0; j < rows.length; j++) {
+                values.push(rows[j].children[i].innerHTML);
+            }
+            obj.values = values;
+            data.push(obj)
+        }
+        console.log(data);
     }
 }

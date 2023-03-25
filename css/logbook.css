@@ -193,6 +193,9 @@
 .applyMarks {
     cursor: pointer;
 }
+.dashboard {
+    overflow: auto;
+}
 @media (max-width: 768px) {
     .logbook .action {
         gap: 10px;
