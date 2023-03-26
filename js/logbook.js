@@ -4,7 +4,7 @@ window.onload = () => {
     const dashboard = document.getElementsByClassName("dashboard")[0];
     const tableHead = document.getElementById("tableHead");
     const tableRows = document.getElementsByClassName("tableRows");
-    let rows, rowsByPage = 5, pageActive = 1;
+    let rows, rowsByPage = 10, pageActive = 1;
     const pageItem = document.getElementsByClassName("page-item");
     const pageNumber = document.getElementsByClassName("page-number");
     const movePaginate = document.getElementsByClassName("move-paginate");
@@ -15,6 +15,13 @@ window.onload = () => {
     const markInput = document.getElementsByClassName("markInput");
     const applyMarks = document.getElementsByClassName("applyMarks");
     const saveLog = document.getElementById("saveLog");
+
+    const subject = document.getElementById("subject");
+    const classValue = document.getElementById("class");
+    const term = document.getElementById("term");
+    const period = document.getElementById("period");
+    const year = document.getElementById("year");
+    const teacher = document.getElementById("teacher");
 
     if (screen.width > 1200) {
         const width = screen.width - linksDiv.clientWidth;
@@ -135,13 +142,9 @@ window.onload = () => {
             newCell.innerHTML = "صف جديد"
             newRow.appendChild(newCell);
         }
-        insertAfter(newRow, tableRows[tableRows.length - 1]);
+        insertAfter(newRow, tableHead)
         actions();
-        let newRows = [];
-        newRows = newRows.concat(rows.slice(0, tableRows.length - 1));
-        newRows.push(newRow);
-        newRows = newRows.concat(rows.slice(tableRows.length - 1))
-        rows = newRows;
+        rows.unshift(newRow)
         clearNumber();
         displayNumbers();
     }
@@ -161,6 +164,7 @@ window.onload = () => {
         actions();
     }
     saveLog.onclick = () => {
+        let res = {};
         let data = [];
         for (let i = 0; i < tableHead.children.length; i++) {
             const obj = {
@@ -173,6 +177,13 @@ window.onload = () => {
             obj.values = values;
             data.push(obj)
         }
-        console.log(data);
+        res.data = data;
+        res.subject = subject.value;
+        res.class = classValue.value;
+        res.term = term.value;
+        res.period = period.value;
+        res.year = year.value;
+        res.teacher = teacher.value;
+        console.log(res);
     }
 }
