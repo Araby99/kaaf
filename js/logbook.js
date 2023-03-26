@@ -82,7 +82,7 @@ window.onload = () => {
         }
         for (let i = 0; i < applyMarks.length; i++) {
             applyMarks[i].onclick = () => {
-                if (Number(markInput[i].value) > Number(maxMarkInput[i].value)) {
+                if (parseInt(markInput[i].value) > parseInt(maxMarkInput[i].value)) {
                     alert("mark should be lower")
                 } else {
                     for (let j = 0; j < rows.length; j++) {
